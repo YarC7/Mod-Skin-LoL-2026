@@ -1,33 +1,49 @@
 # Đóng góp cho Mod Skin LoL
 
-Cảm ơn bạn đã quan tâm! Mọi PR, báo lỗi, góp ý đều được chào đón.
+Cảm ơn bạn đã dùng và quan tâm đến dự án!
 
-## Chạy dev
+> **Lưu ý quan trọng:** repo này (`Mod-Skin-LoL-2026`) là **repo phát hành (release-only)** — chỉ đăng bản tải, changelog và tiếp nhận phản hồi. **Source code là private** để hạn chế clone/cheat, nên repo này **không nhận Pull Request code**.
 
-```powershell
-npm install
-npm start    # chạy dev
-npm run lint # kiểm tra eslint
-npm run make # đóng gói thử (x64)
-```
+Mọi đóng góp của bạn thực hiện qua **Issues**.
 
-## Quy trình PR
+## Nên tạo Issue khi nào?
 
-1. Fork repo, tạo nhánh từ `main` (`feat/...`, `fix/...`).
-2. Code + test thủ công flow Apply skin (mode LTK Manager và Auto nếu đụng engine).
-3. PR vào `main`, mô tả rõ: làm gì, test thế nào, ảnh chụp nếu đổi UI.
+- **Báo lỗi (Bug):** crash, không mở được app, bấm Apply không có tác dụng, lỗi khi vào game.
+- **Skin lỗi / thiếu:** sai hình, thiếu chroma, tìm không ra tướng/skin, tên sai (ghi rõ tên tướng + tên skin).
+- **Đề xuất tính năng (Feature):** mô tả bạn muốn gì và vì sao (ví dụ: "nhớ mode đã chọn", "lọc theo lane").
+- **Lỗi cài đặt:** antivirus báo sai, thiếu WebView2, không cài được `.exe`.
 
-## Release (maintainer)
+## Không tạo Issue khi nào?
 
-```powershell
-git add -A; git commit -m "..."
-git push origin main; git tag vX.Y.Z; git push origin vX.Y.Z
-```
+- Hỏi cách chơi LoL, xin acc, quảng cáo — sẽ bị close.
+- **Lỗi bảo mật:** đừng đăng public, xem `SECURITY.md` để gửi riêng.
+- Issue đã có người đăng rồi: đừng tạo mới, hãy comment thêm thông tin + thả 👍 vào issue cũ.
 
-Workflow `publish.yml` tự build + đăng Releases khi push tag `v*.*.*`.
+## Cách tạo Issue tốt (được fix nhanh)
 
-## Lưu ý
+1. Vào tab **Issues > New issue**, chọn đúng mẫu (Bug / Skin / Feature).
+2. Tiêu đề rõ ràng, prefix gợi ý:
+   - `[Bug] Apply Yasuo True Damage bị đứng ở 50%`
+   - `[Skin] Thiếu chroma Ahri Spirit Blossom đỏ`
+   - `[Feature] Nhớ tướng đã chọn sau khi restart`
+3. Nội dung ghi đủ:
+   - Phiên bản app (ví dụ `v1.3.8` — xem ở góc app hoặc tên file tải về).
+   - Windows mấy (10 / 11), mode đang dùng (`LTK Manager` hay `Auto`).
+   - Các bước tái hiện lỗi (1-2-3).
+   - Mong đợi gì vs thực tế bị gì.
+   - File log: `%APPDATA%\mod-skin-lol\logs\main.log` (dán đoạn tail lúc lỗi).
+   - Ảnh chụp màn hình / toast / dialog lỗi (rất có ích).
 
-- Đừng commit `.env`, `node_modules`, folder `new-resource/`, file `.fantome` lẻ.
-- Tool bundle trong `tools/` (GPL cslol) chỉ update khi có bản mod-tools mới đã verify.
-- Data DDragon: chạy `node scripts/fetch-ddragon-data.mjs` rồi commit JSON.
+## Quy tắc chung
+
+- 1 Issue = 1 vấn đề. Đừng dồn 5 lỗi vào 1 Issue.
+- Viết tiếng Việt hoặc English đều được, lịch sự, không spam, không đăng thông tin nhạy cảm (token, key, thông tin cá nhân).
+- Maintainer sẽ gắn nhãn (`bug`, `skin`, `enhancement`, `duplicate`...), hỏi thêm nếu thiếu info, và close Issue khi bản fix đã lên Releases.
+
+## Muốn đóng góp nhiều hơn?
+
+- Test bản mới và báo lại kết quả (kể cả "bản này hết lỗi rồi") cũng là đóng góp quý.
+- Chia sẻ cách bạn vượt qua lỗi cài đặt/antivirus giúp người khác.
+- Muốn góp code/assets: hiện chưa mở, hãy mở Issue `Discussion` mô tả ý tưởng trước để maintainer liên hệ riêng.
+
+*Cảm ơn bạn đã giúp Mod Skin LoL tốt hơn mỗi ngày!*

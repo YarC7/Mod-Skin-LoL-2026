@@ -30,9 +30,7 @@ Skin assets: [Rose / LeagueSkins](https://github.com/Alban1911/LeagueSkins)
 
 Không liên kết với Riot Games. Dùng mod skin có rủi ro theo chính sách nhà phát hành — bạn tự chịu trách nhiệm.
 
-
-![Downloads](https://img.shields.io/github/downloads/YarC7/mod-skin-lol/total)
-
-
 ---
 *Phát triển bởi [YarC7](https://github.com/YarC7)*
+
+![Downloads](https://img.shields.io/github/downloads/YarC7/Mod-Skin-LoL-2026/total)
